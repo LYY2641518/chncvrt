@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: chncvrt
+Version: 0.1.0
+Summary: Chinese number to Arabic number converter
+Author: Lyy
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
