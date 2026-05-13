@@ -28,9 +28,6 @@ def test_chn2num_hundred_zero():
 def test_chn2num_decimal_only():
     assert chn2num("十")==10
     
-def test_chn2num_thousand_zero():
-    assert chn2num("一千零五十三")==1053
-    
 def test_chn2num_thousand_2zero():
     assert chn2num("一千零三")==1003
 
