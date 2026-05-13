@@ -68,16 +68,16 @@ def test_chn2num_pure_value():
     assert chn2num("九八七零五四")==987054
     
 def test_chn2num_thousand_nounit():
-    assert chn2num("六千九")==6900
+    assert chn2num("六千九",mode="relaxed")==6900
     
 def test_chn2num_wan_nounit():
-    assert chn2num("二十九萬七千五")==297500
+    assert chn2num("二十九萬七千五",mode="relaxed")==297500
 
 def test_chn2num_hundred_nounit():
-    assert chn2num("八百七")==870
+    assert chn2num("八百七",mode="relaxed")==870
 
 def test_chn2num_yi_nounit():
-    assert chn2num("三億五")==350000000
+    assert chn2num("三億五",mode="relaxed")==350000000
 
 def test_chn2num_yi_with_unit():
     assert chn2num("三億五百")==300000500
@@ -89,5 +89,6 @@ def test_chn2num_yi_with_zero_no_unit():
 def test_chn2num_yi_with_unit_zero():
     assert chn2num("三億零五百")==300000500
 
-# def test_chn2num_zero_head_pure_value():
-#     assert chn2num("零九二九八二零")==0929820
+def test_chn2num_zero_head_pure_value():
+     assert chn2num("零九二九八二零",mode="relaxed")=="0929820"
+     

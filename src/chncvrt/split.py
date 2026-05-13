@@ -1,4 +1,4 @@
-from . import core
+from .constants import multi,unit,value,special
 
 def split_chn_str(chn_str) :
     #將中文數字與其他文字分開
@@ -8,7 +8,7 @@ def split_chn_str(chn_str) :
     res = []
     for index,c in enumerate(chn_str): 
         pre_char = now_char
-        if c in core.multi or c in core.unit or c in core.value or c in core.special:
+        if c in multi or c in unit or c in value or c in special:
             now_char = "chn"
         else:
             now_char = "ch"
