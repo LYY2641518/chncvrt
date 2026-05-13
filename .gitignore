@@ -11,5 +11,10 @@ __pycache__/
 # VSCode
 .vscode/
 
+# build / packaging
+build/
+dist/
+*.egg-info/
+
 # macOS
 .DS_Store
